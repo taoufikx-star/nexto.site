@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prendre un ticket - Nexto</title>
+  <link rel="stylesheet" href="A.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="navbar">
+      <div class="logo">Nexto</div>
+      <ul class="nav-links">
+        <li><a href="A.html">Accueil</a></li>
+        <li><a href="A1.html">Prendre un ticket</a></li>
+        <li><a href="A3.html">File d'attente</a></li>
+        <li><a href="A4.html">Admin</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container" style="text-align: center;">
+    <h1>Bienvenue sur Nexto</h1>
+    <p style="font-size: 1.2rem;">Prenez un ticket pour votre service administratif</p>
+
+    <div class="service-buttons" id="serviceList">
+      <button class="service-btn" data-service="Carte d'identité / Passeport" data-prefix="A">Carte d'identité / Passeport</button>
+      <button class="service-btn" data-service="Permis de conduire" data-prefix="B">Permis de conduire</button>
+      <button class="service-btn" data-service="Certificat de résidence" data-prefix="C">Certificat de résidence</button>
+      <button class="service-btn" data-service="Impôts / Taxes" data-prefix="D">Impôts / Taxes</button>
+    </div>
+
+    <button id="takeTicketBtn" class="btn" style="margin-top: 1.5rem;">Prendre un ticket</button>
+    <div class="info-message">⚠️ Veuillez patienter après avoir pris votre ticket</div>
+  </main>
+
+  <footer class="footer">
+    <p>© Nexto - Administration simplifiée</p>
+  </footer>
+
+  <script>
+    let selectedService = null;
+    let selectedPrefix = null;
+
+    document.querySelectorAll('.service-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.service-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        selectedService = btn.dataset.service;
+        selectedPrefix = btn.dataset.prefix;
+      });
+    });
+
+    document.getElementById('takeTicketBtn').addEventListener('click', () => {
+      if (!selectedService) {
+        alert("Veuillez choisir un service d'abord");
+        return;
+      }
+
+      let tickets = JSON.parse(localStorage.getItem('nextoTickets')) || [];
+      let counter = parseInt(localStorage.getItem('nextoTicketCounter')) || 100;
+      const newNumber = counter + 1;
+      localStorage.setItem('nextoTicketCounter', newNumber);
+
+      const ticketNumber = `${selectedPrefix}${newNumber}`;
+      const now = new Date();
+      const timeStr = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
+
+      const newTicket = {
+        id: Date.now(),
+        ticketNumber: ticketNumber,
+        service: selectedService,
+        prefix: selectedPrefix,
+        timestamp: timeStr,
+        fullDate: now.toISOString(),
+        status: 'waiting',
+        guichet: (selectedService.includes('Carte') ? 'Guichet 1' : (selectedService.includes('Permis') ? 'Guichet 2' : (selectedService.includes('Certificat') ? 'Guichet 3' : 'Guichet 4')))
+      };
+      tickets.push(newTicket);
+      localStorage.setItem('nextoTickets', JSON.stringify(tickets));
+      localStorage.setItem('lastGeneratedTicket', JSON.stringify(newTicket));
+
+      window.location.href = "A2.html";
+    });
+
+    if(!localStorage.getItem('nextoTickets')) {
+      const seed = [
+        { id: 1, ticketNumber: "A041", service: "Carte d'identité / Passeport", prefix:"A", timestamp:"14:32", status:"completed", guichet:"Guichet 1", fullDate: new Date().toISOString() },
+        { id: 2, ticketNumber: "A042", service: "Carte d'identité / Passeport", prefix:"A", timestamp:"14:40", status:"in_progress", guichet:"Guichet 1", fullDate: new Date().toISOString() },
+        { id: 3, ticketNumber: "B043", service: "Permis de conduire", prefix:"B", timestamp:"14:45", status:"waiting", guichet:"Guichet 2", fullDate: new Date().toISOString() },
+        { id: 4, ticketNumber: "C044", service: "Certificat de résidence", prefix:"C", timestamp:"14:50", status:"waiting", guichet:"Guichet 3", fullDate: new Date().toISOString() },
+        { id: 5, ticketNumber: "A045", service: "Carte d'identité / Passeport", prefix:"A", timestamp:"14:55", status:"waiting", guichet:"Guichet 1", fullDate: new Date().toISOString() }
+      ];
+      localStorage.setItem('nextoTickets', JSON.stringify(seed));
+      localStorage.setItem('nextoTicketCounter', '45');
+    }
+  </script>
+</body>
+</html>

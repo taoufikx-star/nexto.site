@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket généré - Nexto</title>
+  <link rel="stylesheet" href="A.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="navbar">
+      <div class="logo">Nexto</div>
+      <ul class="nav-links">
+        <li><a href="A.html">Accueil</a></li>
+        <li><a href="A1.html">Prendre un ticket</a></li>
+        <li><a href="A3.html">File d'attente</a></li>
+        <li><a href="A4.html">Admin</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="ticket-card">
+      <h2>✅ Ticket généré</h2>
+      <div class="ticket-number" id="ticketNumberDisplay">B12</div>
+      <p><strong>SERVICE</strong><br><span id="serviceDisplay">État Civil</span></p>
+      <p><strong>HEURE DU TICKET</strong><br><span id="timeDisplay">14:23</span></p>
+      <div style="margin: 2rem 0; font-style: italic;">Veuillez attendre votre tour</div>
+      <a href="A.html" class="btn">Retour à l'accueil</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© Nexto</p>
+  </footer>
+
+  <script>
+    const lastTicket = JSON.parse(localStorage.getItem('lastGeneratedTicket'));
+    if(lastTicket) {
+      document.getElementById('ticketNumberDisplay').innerText = lastTicket.ticketNumber;
+      document.getElementById('serviceDisplay').innerText = lastTicket.service;
+      document.getElementById('timeDisplay').innerText = lastTicket.timestamp;
+    }
+  </script>
+</body>
+</html>
