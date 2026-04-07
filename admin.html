@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexto – Administration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">Nexto – Admin Panel</div>
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="queue.html">File d’attente</a>
+        <a href="display.html">Écran public</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Administration des files</h1>
+    <div class="admin-panel">
+      <div class="current-info">
+        <p><strong>Ticket actuel :</strong> B12 – Guichet 2</p>
+        <p><strong>Prochain ticket :</strong> B13</p>
+      </div>
+      <div class="admin-actions">
+        <a href="#" class="btn">Appeler suivant</a>
+        <a href="#" class="btn btn-outline">Annuler ticket</a>
+        <a href="#" class="btn btn-outline">Réinitialiser</a>
+      </div>
+    </div>
+
+    <div class="waiting-list">
+      <h2>Tickets en attente</h2>
+      <ul>
+        <li>B13 – Carte d’identité</li>
+        <li>B14 – Impôts</li>
+        <li>C01 – Résidence</li>
+      </ul>
+    </div>
+
+    <div class="history">
+      <h2>Historique des tickets terminés</h2>
+      <ul>
+        <li>B09 – Permis (terminé à 14:20)</li>
+        <li>B10 – Carte d’identité (14:25)</li>
+        <li>B11 – Impôts (14:30)</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Actions réservées aux agents – Les modifications sont simulées (version statique)</div>
+  </footer>
+</body>
+</html>

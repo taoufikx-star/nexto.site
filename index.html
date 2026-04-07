@@ -3,62 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nexto - Gestion files d'attente</title>
-  <link rel="stylesheet" href="A.css">
+  <title>Nexto – Accueil</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Nexto</div>
-    <ul class="nav-links">
-      <li><a href="A.html">Accueil</a></li>
-      <li><a href="#features">Fonctionnalités</a></li>
-      <li><a href="#how">Comment ça marche</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="A1.html" class="btn-cta">Commencer</a>
-  </nav>
-
-  <div class="container">
-    <div class="hero">
-      <h1>Simplifiez la gestion des files d’attente dans votre administration</h1>
-      <p>Prenez un ticket en ligne, suivez votre tour en temps réel et réduisez l'attente.</p>
-      <div class="btn-group">
-        <a href="A1.html" class="btn">📌 Prendre un ticket</a>
-        <a href="A3.html" class="btn btn-outline">🖥️ Voir la démo</a>
-      </div>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">Nexto</div>
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="#fonctionnalites">Fonctionnalités</a>
+        <a href="#comment">Comment ça marche</a>
+        <a href="#avantages">Avantages</a>
+        <a href="ticket.html" class="btn-ghost">Prendre un ticket</a>
+        <a href="display.html" class="btn-ghost">Voir la démo</a>
+      </nav>
     </div>
+  </header>
 
-    <section id="features">
-      <h2 style="text-align:center; margin-bottom:1rem;">Fonctionnalités</h2>
-      <div class="cards">
-        <div class="card">🎫 Prise de ticket rapide<br><span style="font-size:0.9rem;color:#475569;">En quelques clics</span></div>
-        <div class="card">📡 Affichage en temps réel<br><span style="font-size:0.9rem;color:#475569;">Écran TV dédié</span></div>
-        <div class="card">👥 Gestion facile<br><span style="font-size:0.9rem;color:#475569;">Pour le personnel</span></div>
-        <div class="card">⏱️ Réduction du temps d'attente<br><span style="font-size:0.9rem;color:#475569;">File optimisée</span></div>
+  <main>
+    <section class="hero container">
+      <h1>Simplifiez la gestion des files d’attente dans votre administration</h1>
+      <p>Nexto fluidifie l'accueil des usagers et optimise le travail des agents.</p>
+      <div class="btn-group">
+        <a href="ticket.html" class="btn">Prendre un ticket</a>
+        <a href="display.html" class="btn btn-outline">Voir la démo</a>
+      </div>
+      <div class="hero-illustration">Guichet administratif</div>
+    </section>
+
+    <section id="fonctionnalites" class="container">
+      <h2>Fonctionnalités clés</h2>
+      <div class="grid-cards">
+        <div class="card"><strong>Prise de ticket rapide</strong><br>En quelques clics, obtenez votre numéro.</div>
+        <div class="card"><strong>Affichage en temps réel</strong><br>Écran public avec numéro appelé.</div>
+        <div class="card"><strong>Gestion facile pour le personnel</strong><br>Appel suivant, annulation, historique.</div>
+        <div class="card"><strong>Réduction du temps d’attente</strong><br>Files mieux organisées.</div>
       </div>
     </section>
 
-    <section id="how">
-      <h2 style="text-align:center; margin:2rem 0 1rem;">Comment ça marche</h2>
-      <div class="cards">
-        <div class="card">1️⃣ Choisissez votre service</div>
-        <div class="card">2️⃣ Prenez un ticket</div>
-        <div class="card">3️⃣ Attendez votre appel sur l'écran</div>
+    <section id="comment" class="container">
+      <h2>Comment ça marche ?</h2>
+      <div class="steps">
+        <div class="step">Choisissez votre service</div>
+        <div class="step">Prenez un ticket</div>
+        <div class="step"> Suivez l’affichage</div>
+        <div class="step">Rendez-vous au guichet</div>
       </div>
     </section>
 
-    <section>
-      <h2 style="text-align:center; margin:2rem 0 1rem;">Avantages</h2>
-      <div class="cards">
-        <div class="card">✅ Gain de temps</div>
-        <div class="card">✅ Fluidité des files</div>
-        <div class="card">✅ Meilleure expérience usager</div>
-      </div>
+    <section id="avantages" class="container">
+      <h2>Avantages</h2>
+      <ul>
+        <li>Gain de temps pour les usagers</li>
+        <li>Fluidité des files d’attente</li>
+        <li>Meilleure expérience usager</li>
+      </ul>
     </section>
-  </div>
+  </main>
 
-  <footer id="contact">
-    <p>© 2026 Nexto - Tous droits réservés | <a href="#">Contact</a> | <a href="#">Mentions légales</a> | <a href="#">Accessibilité</a></p>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>© 2026 Nexto – Gestion des files</div>
+      <div><a href="#">Contact  <a href="#">Mentions légales</a></div>
+    </div>
   </footer>
 </body>
 </html>

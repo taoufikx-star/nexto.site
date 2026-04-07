@@ -3,37 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>File d'attente - Nexto</title>
-  <link rel="stylesheet" href="A.css">
+  <title>Nexto – Affichage public</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .display-screen { background: #0a1c2a; color: white; text-align: center; padding: 3rem 1rem; border-radius: 2rem; }
+    .current-number { font-size: 8rem; font-weight: bold; letter-spacing: 8px; margin: 1rem 0; }
+    .counter { font-size: 2rem; margin: 1rem 0; }
+    .last-called { display: flex; justify-content: center; gap: 2rem; font-size: 1.5rem; margin-top: 2rem; }
+  </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Nexto</div>
-    <ul class="nav-links">
-      <li><a href="A.html">Accueil</a></li>
-      <li><a href="A5.html">Admin</a></li>
-    </ul>
-  </nav>
-
-  <div class="container">
-    <h1>📋 File d'attente</h1>
-    <table>
-      <thead>
-        <tr><th>Numéro</th><th>Service</th><th>Statut</th><th>Heure</th></tr>
-      </thead>
-      <tbody>
-        <tr style="background:#eef2ff;"><td><strong>B12</strong></td><td>Permis de conduire</td><td><span class="badge">🔵 En cours</span></td><td>14:35</td></tr>
-        <tr><td>B13</td><td>Carte d'identité</td><td><span style="background:#e2e8f0; padding:0.2rem 0.8rem; border-radius:30px;">⏳ En attente</span></td><td>14:38</td></tr>
-        <tr><td>B14</td><td>Impôts / Taxes</td><td><span style="background:#e2e8f0; padding:0.2rem 0.8rem; border-radius:30px;">⏳ En attente</span></td><td>14:42</td></tr>
-        <tr><td>B15</td><td>Certificat de résidence</td><td><span style="background:#e2e8f0; padding:0.2rem 0.8rem; border-radius:30px;">⏳ En attente</span></td><td>14:45</td></tr>
-      </tbody>
-    </table>
-    <div style="margin-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
-      <p><strong>⏱️ Temps estimé d'attente :</strong> 12 minutes</p>
-      <a href="A4.html" class="btn btn-outline">🔄 Actualiser</a>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">Nexto – Affichage des tickets</div>
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="ticket.html">Prendre ticket</a>
+        <a href="queue.html">File d’attente</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <footer>Nexto - File d'attente en temps réel</footer>
+  <main class="container">
+    <div class="display-screen">
+      <div class="current-number">B12</div>
+      <div class="counter">Guichet 2</div>
+      <div class="message">Veuillez vous diriger vers votre guichet</div>
+      <div class="last-called">
+        <span>Derniers appelés :</span>
+        <span>B09</span> <span>B10</span> <span>B11</span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Mise à jour en temps réel – Rendez-vous au guichet indiqué</div>
+  </footer>
 </body>
 </html>

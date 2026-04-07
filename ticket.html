@@ -3,36 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prendre un ticket - Nexto</title>
-  <link rel="stylesheet" href="A.css">
+  <title>Nexto – Prendre un ticket</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Nexto</div>
-    <ul class="nav-links">
-      <li><a href="A.html">Accueil</a></li>
-      <li><a href="A4.html">File d'attente</a></li>
-    </ul>
-  </nav>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">Nexto</div>
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="ticket.html" class="active">Ticket</a>
+        <a href="display.html">Affichage</a>
+        <a href="queue.html">File d’attente</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="container" style="text-align:center">
+  <main class="container">
     <h1>Bienvenue sur Nexto</h1>
-    <p style="font-size:1.2rem; margin-bottom:1rem;">Prenez un ticket pour votre service administratif</p>
+    <p class="subtitle">Prenez un ticket pour votre service administratif</p>
 
     <div class="service-buttons">
-      <span class="service-btn">🪪 Carte d'identité / Passeport</span>
-      <span class="service-btn">🚗 Permis de conduire</span>
-      <span class="service-btn">📄 Certificat de résidence</span>
-      <span class="service-btn">💰 Impôts / Taxes</span>
+      <a href="generated.html#ticket-cni" class="service-btn">Carte d’identité / Passeport</a>
+      <a href="generated.html#ticket-permis" class="service-btn">Permis de conduire</a>
+      <a href="generated.html#ticket-residence" class="service-btn">Certificat de résidence</a>
+      <a href="generated.html#ticket-impots" class="service-btn">Impôts / Taxes</a>
     </div>
 
-    <a href="A2.html" class="btn" style="margin-top:1.5rem;">Prendre un ticket</a>
+    <div class="info-message">
+      Veuillez patienter après avoir pris votre ticket.
+    </div>
+  </main>
 
-    <p style="margin-top:2rem; color:#475569; background:#eef2ff; padding:0.8rem; border-radius:40px;">
-      ℹ️ Veuillez patienter après avoir pris votre ticket
-    </p>
-  </div>
-
-  <footer>© Nexto - Simplifions l'attente</footer>
+  <footer class="footer">
+    <div class="container">© 2026 Nexto – Simplifiez vos files d’attente</div>
+  </footer>
 </body>
 </html>

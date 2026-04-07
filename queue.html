@@ -3,42 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Écran d'affichage - Nexto</title>
-  <link rel="stylesheet" href="A.css">
-  <style>
-    body {
-      background: #0f172a;
-      color: white;
-    }
-    .navbar {
-      background: #1e293b;
-    }
-    .logo {
-      background: linear-gradient(135deg, #60a5fa, #a78bfa);
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-  </style>
+  <title>Nexto – File d’attente</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Nexto Affichage</div>
-    <ul class="nav-links">
-      <li><a href="A.html" style="color:#cbd5e1;">Accueil</a></li>
-    </ul>
-  </nav>
-
-  <div class="container" style="text-align:center">
-    <h1 style="font-size:2rem;">📢 Appel en cours</h1>
-    <div class="screen-number">B12</div>
-    <p style="font-size:2rem; margin-top:1rem;">Guichet 🏷️ 2</p>
-    <div style="background:#1e293b; border-radius:32px; padding:1rem; max-width:400px; margin:2rem auto;">
-      <p style="font-size:1.2rem;">Derniers appelés :</p>
-      <p style="font-size:1.5rem; font-weight:bold;">B09 • B10 • B11</p>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">Nexto</div>
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="ticket.html">Ticket</a>
+        <a href="display.html">Affichage</a>
+        <a href="queue.html" class="active">File d’attente</a>
+        <a href="admin.html">Admin</a>
+      </nav>
     </div>
-    <p style="font-size:1.3rem;">👉 Veuillez vous diriger vers votre guichet</p>
-  </div>
+  </header>
 
-  <footer style="background:#0f172a;">Nexto - Affichage public</footer>
+  <main class="container">
+    <h1>File d’attente</h1>
+    <div class="estimated-time">Temps d’attente estimé : 12 minutes</div>
+    
+    <table>
+      <thead>
+        <tr><th>Numéro</th><th>Service</th><th>Statut</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>B12</td><td>Permis de conduire</td><td><span class="badge current">En cours</span></td></tr>
+        <tr><td>B13</td><td>Carte d’identité</td><td><span class="badge waiting">En attente</span></td></tr>
+        <tr><td>B14</td><td>Impôts</td><td><span class="badge waiting">En attente</span></td></tr>
+        <tr><td>C01</td><td>Certificat de résidence</td><td><span class="badge waiting">En attente</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="refresh">
+      <a href="queue.html" class="btn btn-outline">⟳ Actualiser</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Liste mise à jour automatiquement – Rafraîchissez pour voir les changements</div>
+  </footer>
 </body>
 </html>
