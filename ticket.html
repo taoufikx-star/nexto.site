@@ -1,43 +1,20 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nexto – Prendre un ticket</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="navbar">
-    <div class="container nav-inner">
-      <div class="logo">Nexto</div>
-      <nav class="nav-links">
-        <a href="index.html">Accueil</a>
-        <a href="ticket.html" class="active">Ticket</a>
-        <a href="display.html">Affichage</a>
-        <a href="queue.html">File d’attente</a>
-        <a href="admin.html">Admin</a>
-      </nav>
-    </div>
-  </header>
+/* S'assurer que le body prend toute la hauteur */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
 
-  <main class="container">
-    <h1>Bienvenue sur Nexto</h1>
-    <p class="subtitle">Prenez un ticket pour votre service administratif</p>
+/* Le contenu principal prend l’espace restant */
+main {
+  flex: 1;
+}
 
-    <div class="service-buttons">
-      <a href="generated.html#ticket-cni" class="service-btn">Carte d’identité / Passeport</a>
-      <a href="generated.html#ticket-permis" class="service-btn">Permis de conduire</a>
-      <a href="generated.html#ticket-residence" class="service-btn">Certificat de résidence</a>
-      <a href="generated.html#ticket-impots" class="service-btn">Impôts / Taxes</a>
-    </div>
-
-    <div class="info-message">
-      Veuillez patienter après avoir pris votre ticket.
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container">© 2026 Nexto – Simplifiez vos files d’attente</div>
-  </footer>
-</body>
-</html>
+/* Footer collé en bas */
+.footer {
+  background-color: #f0f0f0; /* couleur de fond */
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto; /* pousse le footer en bas */
+}
