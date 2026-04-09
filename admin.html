@@ -1,221 +1,109 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nexto — Admin Panel</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Nexto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-inner">
-
-  <nav class="navbar">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <div class="logo-mark">N</div>
-        Nexto
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Accueil</a></li>
-        <li><a href="ticket.html" class="nav-link">Prendre un ticket</a></li>
-        <li><a href="attente.html" class="nav-link">File d'attente</a></li>
-        <li><a href="ecran.html" class="nav-link">Écran TV</a></li>
-        <li><a href="admin.html" class="nav-link active">Admin</a></li>
-      </ul>
-      <span class="admin-badge-nav">⚙️ Admin</span>
-    </div>
-  </nav>
-
-  <main class="admin-page">
-    <div class="container">
-
-      <div class="admin-header">
-        <div>
-          <h1 class="admin-title">⚙️ Admin Panel</h1>
-          <p class="admin-sub">Gestion des files d'attente — TechNova / Nexto · 14:32:05</p>
+<body style="background: #fcfcfc;">
+    <header class="header">
+        <a href="index.html" class="logo"><div class="logo-box">N</div> Nexto <span style="font-weight: 400; font-size: 0.9rem; color: #888; margin-left: 10px;">Admin Panel</span></a>
+        <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <div style="text-align: right;">
+                <p style="font-size: 0.875rem; font-weight: 700;">Agent Taoufik</p>
+                <p style="font-size: 0.75rem; color: #22c55e; font-weight: 600;">Guichet 03 • En ligne</p>
+            </div>
+            <div style="width: 40px; height: 40px; background: #eee; border-radius: 50%;"></div>
         </div>
-        <div class="admin-header-links">
-          <a href="ecran.html" class="btn btn-ghost">📺 Écran public</a>
-          <a href="attente.html" class="btn btn-ghost">📋 File d'attente</a>
-        </div>
-      </div>
+    </header>
 
-      <div class="admin-grid">
-
-        <!-- Ticket en cours -->
-        <div class="admin-card admin-card-current">
-          <div class="admin-card-title">🔔 Ticket en cours</div>
-          <div class="admin-current-num">
-            <span class="admin-letter">B</span>12
-          </div>
-          <div class="admin-current-chips">
-            <span class="admin-chip">🚗 Permis de conduire</span>
-            <span class="admin-chip">Guichet G-02</span>
-            <span class="admin-chip">Depuis 14:20</span>
-          </div>
-          <div class="admin-actions">
-            <a href="admin.html" class="btn btn-green btn-lg">▶ Appeler suivant</a>
-            <a href="admin.html" class="btn btn-red">✕ Annuler ticket</a>
-            <a href="admin.html" class="btn btn-orange" onclick="return confirm('Réinitialiser toute la file ?')">⟳ Réinitialiser</a>
-          </div>
-        </div>
-
-        <!-- Statistiques -->
-        <div class="admin-card">
-          <div class="admin-card-title">📊 Statistiques du jour</div>
-          <div class="admin-stats-grid">
-            <div class="admin-stat">
-              <div class="admin-stat-num color-orange">5</div>
-              <div class="admin-stat-label">En attente</div>
-            </div>
-            <div class="admin-stat">
-              <div class="admin-stat-num color-green">4</div>
-              <div class="admin-stat-label">Traités</div>
-            </div>
-            <div class="admin-stat">
-              <div class="admin-stat-num color-cyan">10</div>
-              <div class="admin-stat-label">Total émis</div>
-            </div>
-            <div class="admin-stat">
-              <div class="admin-stat-num color-blue">12 min</div>
-              <div class="admin-stat-label">Moy. attente</div>
-            </div>
-          </div>
-
-          <!-- Jauge par service -->
-          <div class="admin-service-gauges">
-            <div class="admin-gauge-title">Tickets par service</div>
-            <div class="gauge-row">
-              <span class="gauge-label">Carte d'identité (A)</span>
-              <div class="gauge-bar"><div class="gauge-fill gauge-blue" style="width: 40%"></div></div>
-              <span class="gauge-val">4</span>
-            </div>
-            <div class="gauge-row">
-              <span class="gauge-label">Permis (B)</span>
-              <div class="gauge-bar"><div class="gauge-fill gauge-cyan" style="width: 30%"></div></div>
-              <span class="gauge-val">3</span>
-            </div>
-            <div class="gauge-row">
-              <span class="gauge-label">Résidence (C)</span>
-              <div class="gauge-bar"><div class="gauge-fill gauge-green" style="width: 20%"></div></div>
-              <span class="gauge-val">2</span>
-            </div>
-            <div class="gauge-row">
-              <span class="gauge-label">Impôts (D)</span>
-              <div class="gauge-bar"><div class="gauge-fill gauge-orange" style="width: 10%"></div></div>
-              <span class="gauge-val">1</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- File d'attente -->
-        <div class="admin-card">
-          <div class="admin-card-title">⏳ Tickets en attente</div>
-          <div class="admin-waiting-list">
-
-            <div class="admin-waiting-item">
-              <div class="admin-waiting-left">
-                <span class="admin-waiting-badge">1</span>
-                <div>
-                  <div class="admin-waiting-num">A13</div>
-                  <div class="admin-waiting-service">🪪 Carte d'identité</div>
+    <main class="container" style="padding-top: 3rem;">
+        <!-- Stats Gauges -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem;">
+            <div class="card" style="padding: 1.5rem;">
+                <div class="gauge-wrapper">
+                    <div class="gauge-label"><span>Tickets traités</span> <span>85%</span></div>
+                    <div class="gauge-bg"><div class="gauge-fill" style="width: 85%;"></div></div>
                 </div>
-              </div>
-              <div class="admin-waiting-time">14:25</div>
+                <p style="font-size: 0.75rem; color: #888; margin-top: 0.5rem;">Objectif journalier : 100</p>
             </div>
-
-            <div class="admin-waiting-item">
-              <div class="admin-waiting-left">
-                <span class="admin-waiting-badge">2</span>
-                <div>
-                  <div class="admin-waiting-num">C14</div>
-                  <div class="admin-waiting-service">🏠 Certificat résidence</div>
+            <div class="card" style="padding: 1.5rem;">
+                <div class="gauge-wrapper">
+                    <div class="gauge-label"><span>Satisfaction client</span> <span>92%</span></div>
+                    <div class="gauge-bg"><div class="gauge-fill" style="width: 92%; background: #22c55e;"></div></div>
                 </div>
-              </div>
-              <div class="admin-waiting-time">14:27</div>
+                <p style="font-size: 0.75rem; color: #888; margin-top: 0.5rem;">Basé sur 45 avis</p>
             </div>
-
-            <div class="admin-waiting-item">
-              <div class="admin-waiting-left">
-                <span class="admin-waiting-badge">3</span>
-                <div>
-                  <div class="admin-waiting-num">D15</div>
-                  <div class="admin-waiting-service">📄 Impôts / Taxes</div>
+            <div class="card" style="padding: 1.5rem;">
+                <div class="gauge-wrapper">
+                    <div class="gauge-label"><span>Charge serveur</span> <span>40%</span></div>
+                    <div class="gauge-bg"><div class="gauge-fill" style="width: 40%; background: #3b82f6;"></div></div>
                 </div>
-              </div>
-              <div class="admin-waiting-time">14:28</div>
+                <p style="font-size: 0.75rem; color: #888; margin-top: 0.5rem;">Système stable</p>
             </div>
-
-            <div class="admin-waiting-item">
-              <div class="admin-waiting-left">
-                <span class="admin-waiting-badge">4</span>
-                <div>
-                  <div class="admin-waiting-num">A16</div>
-                  <div class="admin-waiting-service">🪪 Carte d'identité</div>
-                </div>
-              </div>
-              <div class="admin-waiting-time">14:29</div>
-            </div>
-
-            <div class="admin-waiting-item">
-              <div class="admin-waiting-left">
-                <span class="admin-waiting-badge">5</span>
-                <div>
-                  <div class="admin-waiting-num">B17</div>
-                  <div class="admin-waiting-service">🚗 Permis de conduire</div>
-                </div>
-              </div>
-              <div class="admin-waiting-time">14:30</div>
-            </div>
-
-          </div>
         </div>
 
-        <!-- Historique -->
-        <div class="admin-card">
-          <div class="admin-card-title">✅ Historique des tickets traités</div>
-          <div class="admin-history">
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+            <!-- Main Controls -->
+            <div class="space-y-6">
+                <div class="card">
+                    <h3 style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #aaa; margin-bottom: 2rem;">Contrôle du Guichet</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2.5rem;">
+                        <div style="background: #f9fafb; padding: 2rem; border-radius: 20px; text-align: center; border: 1px solid #eee;">
+                            <p style="font-size: 0.7rem; font-weight: 700; color: #aaa; margin-bottom: 0.5rem;">NUMÉRO ACTUEL</p>
+                            <h1 style="font-size: 4.5rem; font-weight: 900;">A042</h1>
+                        </div>
+                        <div style="background: #f9fafb; padding: 2rem; border-radius: 20px; text-align: center; border: 1px solid #eee;">
+                            <p style="font-size: 0.7rem; font-weight: 700; color: #aaa; margin-bottom: 0.5rem;">GUICHET</p>
+                            <h1 style="font-size: 4.5rem; font-weight: 900;">03</h1>
+                        </div>
+                    </div>
+                    <div style="display: grid; gap: 1rem;">
+                        <button class="btn btn-primary" style="padding: 1.5rem; font-size: 1.25rem;">→ APPELER LE SUIVANT</button>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <button class="btn btn-outline" style="padding: 1rem;">RAPPELER</button>
+                            <button class="btn btn-outline" style="padding: 1rem; color: #ef4444; border-color: #fecaca;">ANNULER</button>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="history-item">
-              <span class="history-num">B11</span>
-              <span class="history-service">🚗 Permis de conduire</span>
-              <span class="history-time">14:10</span>
-              <span class="badge-status badge-done">Terminé</span>
-            </div>
-            <div class="history-item">
-              <span class="history-num">A09</span>
-              <span class="history-service">🪪 Carte d'identité</span>
-              <span class="history-time">14:00</span>
-              <span class="badge-status badge-done">Terminé</span>
-            </div>
-            <div class="history-item">
-              <span class="history-num">D07</span>
-              <span class="history-service">📄 Impôts / Taxes</span>
-              <span class="history-time">13:50</span>
-              <span class="badge-status badge-done">Terminé</span>
-            </div>
-            <div class="history-item">
-              <span class="history-num">C05</span>
-              <span class="history-service">🏠 Certificat résidence</span>
-              <span class="history-time">13:40</span>
-              <span class="badge-status badge-done">Terminé</span>
-            </div>
-            <div class="history-item">
-              <span class="history-num">C06</span>
-              <span class="history-service">🏠 Certificat résidence</span>
-              <span class="history-time">13:45</span>
-              <span class="badge-status badge-cancelled">Annulé</span>
+                <div class="card" style="padding: 0; overflow: hidden;">
+                    <h3 style="padding: 1.5rem; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: #aaa; border-bottom: 1px solid #eee;">Historique récent</h3>
+                    <table class="data-table">
+                        <tbody>
+                            <tr><td><strong>A041</strong></td><td>14:32</td><td>Guichet 03</td><td><span class="status-pill status-done">Terminé</span></td></tr>
+                            <tr><td><strong>A040</strong></td><td>14:28</td><td>Guichet 02</td><td><span class="status-pill status-done">Terminé</span></td></tr>
+                            <tr><td><strong>A039</strong></td><td>14:25</td><td>Guichet 01</td><td><span class="status-pill status-done">Terminé</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
-          </div>
+            <!-- Sidebar Queue -->
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.125rem; font-weight: 800;">File d'attente</h3>
+                    <span style="background: #000; color: #fff; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 800;">8</span>
+                </div>
+                <div style="display: grid; gap: 1rem;">
+                    <div style="padding: 1.25rem; border: 2px solid #000; border-radius: 16px; display: flex; justify-content: space-between; align-items: center;">
+                        <div><p style="font-weight: 800; font-size: 1.25rem;">A043</p><p style="font-size: 0.7rem; color: #aaa;">Attente: 12 min</p></div>
+                        <span style="background: #000; color: #fff; font-size: 0.6rem; font-weight: 800; padding: 4px 8px; border-radius: 4px;">SUIVANT</span>
+                    </div>
+                    <div style="padding: 1.25rem; border: 1px solid #eee; border-radius: 16px; opacity: 0.6;">
+                        <p style="font-weight: 800; font-size: 1.25rem;">A044</p><p style="font-size: 0.7rem; color: #aaa;">Attente: 18 min</p>
+                    </div>
+                    <div style="padding: 1.25rem; border: 1px solid #eee; border-radius: 16px; opacity: 0.6;">
+                        <p style="font-weight: 800; font-size: 1.25rem;">A045</p><p style="font-size: 0.7rem; color: #aaa;">Attente: 24 min</p>
+                    </div>
+                    <div style="padding: 1.25rem; border: 1px solid #eee; border-radius: 16px; opacity: 0.6;">
+                        <p style="font-weight: 800; font-size: 1.25rem;">A046</p><p style="font-size: 0.7rem; color: #aaa;">Attente: 30 min</p>
+                    </div>
+                </div>
+                <a href="attente.html" style="display: block; text-align: center; margin-top: 2rem; font-size: 0.875rem; color: #666; font-weight: 600; text-decoration: none;">Voir toute la liste</a>
+            </div>
         </div>
-
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer-simple">
-    <p>© 2026 Nexto — TechNova</p>
-  </footer>
-
+    </main>
 </body>
 </html>

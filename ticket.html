@@ -1,97 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nexto — Votre ticket</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choisir un service - Nexto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-inner">
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"><div class="logo-box">N</div> Nexto</a>
+        <a href="index.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Retour</a>
+    </header>
 
-  <nav class="navbar">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <div class="logo-mark">N</div>
-        Nexto
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Accueil</a></li>
-        <li><a href="ticket.html" class="nav-link">Prendre un ticket</a></li>
-        <li><a href="attente.html" class="nav-link">File d'attente</a></li>
-        <li><a href="ecran.html" class="nav-link">Écran TV</a></li>
-        <li><a href="admin.html" class="nav-link">Admin</a></li>
-      </ul>
-    </div>
-  </nav>
+    <main class="container" style="max-width: 600px; padding-top: 4rem;">
+        <div class="card">
+            <h2 style="font-size: 2rem; font-weight: 800; text-align: center; margin-bottom: 0.5rem;">Bienvenue sur Nexto</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2.5rem;">Prenez un ticket pour votre service administratif</p>
 
-  <main class="genere-page">
+            <form action="genere.html">
+                <div class="service-grid">
+                    <label class="service-card">
+                        <input type="radio" name="service" value="id" checked>
+                        <div class="service-content">
+                            <div class="service-icon">📇</div>
+                            <span style="font-size: 1.125rem; font-weight: 700;">Carte d'identité / Passeport</span>
+                        </div>
+                    </label>
 
-    <div class="genere-card">
+                    <label class="service-card">
+                        <input type="radio" name="service" value="permis">
+                        <div class="service-content">
+                            <div class="service-icon">🚗</div>
+                            <span style="font-size: 1.125rem; font-weight: 700;">Permis de conduire</span>
+                        </div>
+                    </label>
 
-      <!-- Icône succès -->
-      <div class="genere-check">✅</div>
-      <div class="genere-success-label">Ticket généré avec succès</div>
+                    <label class="service-card">
+                        <input type="radio" name="service" value="residence">
+                        <div class="service-content">
+                            <div class="service-icon">🏠</div>
+                            <span style="font-size: 1.125rem; font-weight: 700;">Certificat de résidence</span>
+                        </div>
+                    </label>
 
-      <!-- Numéro du ticket -->
-      <div class="genere-ticket-num">
-        <span class="ticket-letter">B</span>12
-      </div>
+                    <label class="service-card">
+                        <input type="radio" name="service" value="taxes">
+                        <div class="service-content">
+                            <div class="service-icon">📄</div>
+                            <span style="font-size: 1.125rem; font-weight: 700;">Impôts / Taxes</span>
+                        </div>
+                    </label>
+                </div>
 
-      <!-- Service -->
-      <div class="genere-service-badge">
-        🚗 Permis de conduire
-      </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.25rem; font-size: 1.125rem; border-radius: 16px;">
+                    Prendre un ticket
+                </button>
+            </form>
 
-      <!-- Informations -->
-      <div class="genere-infos">
-        <div class="genere-info-row">
-          <span class="genere-info-label">📅 Heure d'émission</span>
-          <span class="genere-info-val">14:32:05</span>
+            <div style="margin-top: 2rem; padding: 1.25rem; background: #f3f4f6; border-radius: 16px; display: flex; align-items: center; gap: 1rem; color: #666;">
+                <span style="font-size: 1.25rem;">ℹ️</span>
+                <p style="font-size: 0.875rem; font-weight: 500;">Veuillez patienter après avoir pris votre ticket</p>
+            </div>
         </div>
-        <div class="genere-info-row">
-          <span class="genere-info-label">🏛️ Guichet</span>
-          <span class="genere-info-val">G-02</span>
-        </div>
-        <div class="genere-info-row">
-          <span class="genere-info-label">👥 Personnes devant vous</span>
-          <span class="genere-info-val">3</span>
-        </div>
-        <div class="genere-info-row">
-          <span class="genere-info-label">⏳ Attente estimée</span>
-          <span class="genere-info-val">~15 min</span>
-        </div>
-      </div>
-
-      <!-- Message d'attente -->
-      <div class="genere-wait-msg">
-        ⏳ Veuillez patienter et rester disponible pour ne pas rater votre tour.
-      </div>
-
-      <!-- Message important -->
-      <div class="genere-important">
-        Conservez ce numéro et présentez-vous au guichet indiqué dès que votre numéro est affiché à l'écran.
-      </div>
-
-      <!-- Actions -->
-      <div class="genere-actions">
-        <a href="attente.html" class="btn btn-outline-dark">📋 Voir la file</a>
-        <a href="ecran.html" class="btn btn-outline-dark">📺 Écran public</a>
-        <a href="index.html" class="btn btn-primary">🏠 Accueil</a>
-      </div>
-
-    </div>
-
-    <!-- Prendre un autre ticket -->
-    <div class="genere-other">
-      <p>Besoin d'un autre service ?</p>
-      <a href="ticket.html" class="btn btn-ghost">+ Prendre un autre ticket</a>
-    </div>
-
-  </main>
-
-  <footer class="footer-simple">
-    <p>© 2026 Nexto — TechNova</p>
-  </footer>
-
+    </main>
 </body>
 </html>
