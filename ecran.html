@@ -2,40 +2,22 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Écran TV - Nexto</title>
+    <title>Nexto - TV</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body { background: #000; color: #fff; overflow: hidden; height: 100vh; }
-        .tv-layout { display: grid; grid-template-columns: 2fr 1fr; height: calc(100vh - 60px); }
-        .current-call { display: flex; flex-direction: column; align-items: center; justify-content: center; border-right: 2px solid #1a1a1a; }
-        .next-list { padding: 3rem; background: #0a0a0a; }
-        .big-num { font-size: 24rem; font-weight: 900; line-height: 0.8; margin: 2rem 0; text-shadow: 0 0 50px rgba(255,255,255,0.1); }
-        .guichet-num { font-size: 4rem; font-weight: 800; color: #22c55e; }
-        .next-item { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem; border-bottom: 1px solid #1a1a1a; font-size: 2.5rem; font-weight: 700; }
-    </style>
 </head>
 <body>
-    <div class="tv-layout">
-        <div class="current-call">
-            <p style="font-size: 2.5rem; color: #666; font-weight: 800; text-transform: uppercase; letter-spacing: 4px;">Numéro Actuel</p>
-            <div class="big-num">A042</div>
-            <div class="guichet-num">GUICHET 03</div>
-        </div>
-
-        <div class="next-list">
-            <h2 style="font-size: 2rem; font-weight: 900; text-transform: uppercase; border-bottom: 4px solid #fff; padding-bottom: 1rem; margin-bottom: 2rem;">Suivants</h2>
-            <div class="next-item"><span>A043</span> <span style="color: #444;">Guichet 01</span></div>
-            <div class="next-item"><span>A044</span> <span style="color: #444;">Guichet 02</span></div>
-            <div class="next-item"><span>A045</span> <span style="color: #444;">Attente</span></div>
-            <div class="next-item"><span>A046</span> <span style="color: #444;">Attente</span></div>
-            <div class="next-item"><span>A047</span> <span style="color: #444;">Attente</span></div>
-        </div>
+    <div class="nav-bar">
+        <a href="index.html" class="btn-nav">← ACCUEIL</a>
     </div>
-
-    <div class="ticker">
-        <div class="ticker-content">
-            BIENVENUE CHEZ NEXTO • MERCI DE PRÉPARER VOS DOCUMENTS • PROCHAIN NUMÉRO : A043 • BONNE JOURNÉE À TOUS • BIENVENUE CHEZ NEXTO • MERCI DE PRÉPARER VOS DOCUMENTS • PROCHAIN NUMÉRO : A043 • BONNE JOURNÉE À TOUS • 
+    <div class="tv-bg">
+        <div class="tv-label">GUICHET 03</div>
+        <div class="tv-num">A42</div>
+        <div class="tv-footer-label">VEUILLEZ VOUS PRÉSENTER</div>
+        
+        <div class="ticker">
+            <div class="ticker-move">
+                BIENVENUE CHEZ NEXTO • PROCHAIN NUMÉRO : A43 • VEUILLEZ PRÉPARER VOS DOCUMENTS • BIENVENUE CHEZ NEXTO • PROCHAIN NUMÉRO : A43 • VEUILLEZ PRÉPARER VOS DOCUMENTS •
+            </div>
         </div>
     </div>
 </body>

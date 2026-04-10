@@ -2,44 +2,20 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticket Généré - Nexto</title>
+    <title>Nexto - Ticket</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <a href="index.html" class="logo"><div class="logo-box">N</div> Nexto</a>
-    </header>
-
-    <main class="container" style="max-width: 500px; text-align: center; padding-top: 4rem;">
-        <div style="width: 64px; height: 64px; background: #dcfce7; color: #166534; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin:88 auto 1.5rem; font-size: 1.5rem;">✓</div>
-        <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">Ticket généré</h2>
-        <p style="color: var(--text-muted); margin-bottom: 3rem;">Votre ticket a été créé avec succès</p>
-
-        <div class="card" style="border: 2px dashed #ccc; padding: 3rem 2rem;">
-            <p style="text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; font-weight: 800; color: #aaa; margin-bottom: 1rem;">Numéro de passage</p>
-            <h1 style="font-size: 6rem; font-weight: 900; line-height: 1; margin-bottom: 2rem;">B12</h1>
-            
-            <div style="border-top: 1px solid #eee; padding-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left;">
-                <div>
-                    <p style="font-size: 0.65rem; font-weight: 800; color: #aaa; text-transform: uppercase; margin-bottom: 0.25rem;">Service</p>
-                    <p style="font-weight: 700;">État Civil</p>
-                </div>
-                <div>
-                    <p style="font-size: 0.65rem; font-weight: 800; color: #aaa; text-transform: uppercase; margin-bottom: 0.25rem;">Heure</p>
-                    <p style="font-weight: 700;">14:23</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 2.5rem; padding: 0.75rem; background: #f9fafb; border-radius: 12px; font-size: 0.75rem; color: #888; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                <span>🕒</span> Veuillez attendre votre tour
-            </div>
+    <div class="nav-bar">
+        <a href="index.html" class="btn-nav">← ACCUEIL</a>
+    </div>
+    <div style="text-align: center; padding-top: 100px;">
+        <h2>Votre Ticket</h2>
+        <div class="ticket">
+            <p style="font-size: 12px; font-weight: 700; color: #888;">NUMÉRO</p>
+            <div class="ticket-num">A42</div>
+            <p style="margin-top: 20px; font-weight: 700;">Service : Administratif</p>
         </div>
-
-        <div style="margin-top: 3rem;">
-            <a href="index.html" class="btn btn-outline" style="width: 100%; padding: 1rem;">Retour à l'accueil</a>
-            <p style="margin-top: 1.5rem; font-size: 0.75rem; color: #aaa;">Vous serez notifié lorsque ce sera votre tour. Gardez votre numéro visible.</p>
-        </div>
-    </main>
+    </div>
 </body>
 </html>

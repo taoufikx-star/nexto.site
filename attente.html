@@ -2,65 +2,41 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File d'attente - Nexto</title>
+    <title>Nexto - Queue</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <a href="index.html" class="logo"><div class="logo-box">N</div> Nexto</a>
-        <a href="index.html" class="btn btn-outline">Retour</a>
-    </header>
-
-    <main class="container" style="max-width: 800px; padding-top: 4rem;">
-        <h1 style="font-size: 3rem; font-weight: 900; margin-bottom: 1rem; text-align: center;">File d'attente</h1>
-        <p style="text-align: center; color: var(--text-muted); margin-bottom: 4rem;">Suivez l'évolution des passages en temps réel.</p>
-        <div class="card" style="padding: 0; overflow: hidden;">
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th>Numéro</th>
-                        <th>Service</th>
-                        <th>Statut</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong style="font-size: 1.25rem;">A23</strong></td>
-                        <td>Dépôt de dossier</td>
-                        <td><span class="status-pill status-active">En cours</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong style="font-size: 1.25rem;">A24</strong></td>
-                        <td>Retrait de document</td>
-                        <td><span class="status-pill status-pending">En attente</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong style="font-size: 1.25rem;">A22</strong></td>
-                        <td>Dépôt de dossier</td>
-                        <td><span class="status-pill status-done">Terminé</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong style="font-size: 1.25rem;">A25</strong></td>
-                        <td>Consultation</td>
-                        <td><span class="status-pill status-pending">En attente</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong style="font-size: 1.25rem;">A26</strong></td>
-                        <td>Retrait de document</td>
-                        <td><span class="status-pill status-pending">En attente</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="card" style="margin-top: 2rem; text-align: center; padding: 1.5rem; background: #f9fafb;">
-            <p style="font-weight: 700; font-size: 1.125rem;">Temps d'attente estimé : <span style="color: var(--primary);">12 minutes</span></p>
-        </div>
-
-        <div style="text-align: center; margin-top: 3rem;">
-            <button class="btn btn-outline" onclick="location.reload()">Actualiser la liste</button>
-        </div>
-    </main>
+    <div class="nav-bar">
+        <a href="index.html" class="btn-nav">← ACCUEIL</a>
+    </div>
+    <div class="table-wrap">
+        <h2 style="margin-bottom: 30px; font-weight: 900;">Tableau d'Attente</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Numéro</th>
+                    <th>Service</th>
+                    <th>Statut</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A42</td>
+                    <td>Administratif</td>
+                    <td>Appel en cours</td>
+                </tr>
+                <tr>
+                    <td>A43</td>
+                    <td>Paiement</td>
+                    <td>En attente</td>
+                </tr>
+                <tr>
+                    <td>A44</td>
+                    <td>Support</td>
+                    <td>En attente</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

@@ -2,66 +2,30 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choisir un service - Nexto</title>
+    <title>Nexto - Service</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <a href="index.html" class="logo"><div class="logo-box">N</div> Nexto</a>
-        <a href="index.html" class="btn btn-outline" style="padding: 0.5rem 1rem;">Retour</a>
-    </header>
-
-    <main class="container" style="max-width: 600px; padding-top: 4rem;">
-        <div class="card">
-            <h2 style="font-size: 2rem; font-weight: 800; text-align: center; margin-bottom: 0.5rem;">Bienvenue sur Nexto</h2>
-            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2.5rem;">Prenez un ticket pour votre service administratif</p>
-
-            <form action="genere.html">
-                <div class="service-grid">
-                    <label class="service-card">
-                        <input type="radio" name="service" value="id" checked>
-                        <div class="service-content">
-                            <div class="service-icon">📇</div>
-                            <span style="font-size: 1.125rem; font-weight: 700;">Carte d'identité / Passeport</span>
-                        </div>
-                    </label>
-
-                    <label class="service-card">
-                        <input type="radio" name="service" value="permis">
-                        <div class="service-content">
-                            <div class="service-icon">🚗</div>
-                            <span style="font-size: 1.125rem; font-weight: 700;">Permis de conduire</span>
-                        </div>
-                    </label>
-
-                    <label class="service-card">
-                        <input type="radio" name="service" value="residence">
-                        <div class="service-content">
-                            <div class="service-icon">🏠</div>
-                            <span style="font-size: 1.125rem; font-weight: 700;">Certificat de résidence</span>
-                        </div>
-                    </label>
-
-                    <label class="service-card">
-                        <input type="radio" name="service" value="taxes">
-                        <div class="service-content">
-                            <div class="service-icon">📄</div>
-                            <span style="font-size: 1.125rem; font-weight: 700;">Impôts / Taxes</span>
-                        </div>
-                    </label>
-                </div>
-
-                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.25rem; font-size: 1.125rem; border-radius: 16px;">
-                    Prendre un ticket
-                </button>
-            </form>
-
-            <div style="margin-top: 2rem; padding: 1.25rem; background: #f3f4f6; border-radius: 16px; display: flex; align-items: center; gap: 1rem; color: #666;">
-                <span style="font-size: 1.25rem;">ℹ️</span>
-                <p style="font-size: 0.875rem; font-weight: 500;">Veuillez patienter après avoir pris votre ticket</p>
+    <div class="nav-bar">
+        <a href="index.html" class="btn-nav">← ACCUEIL</a>
+    </div>
+    <div class="card-box">
+        <h2>Sélectionnez un Service</h2>
+        <form action="genere.html" class="radio-group">
+            <div class="radio-item">
+                <input type="radio" name="s" id="s1" checked>
+                <label for="s1" class="radio-label">Administratif</label>
             </div>
-        </div>
-    </main>
+            <div class="radio-item">
+                <input type="radio" name="s" id="s2">
+                <label for="s2" class="radio-label">Paiement</label>
+            </div>
+            <div class="radio-item">
+                <input type="radio" name="s" id="s3">
+                <label for="s3" class="radio-label">Support Technique</label>
+            </div>
+            <button type="submit" class="btn btn-black" style="margin-top: 20px; width: 100%;">Imprimer le Ticket</button>
+        </form>
+    </div>
 </body>
 </html>
