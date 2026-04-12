@@ -223,3 +223,7 @@ td { padding: 20px; border-bottom: 1px solid #eee; font-weight: 700; }
 }
 
 .val { font-size: 24px; font-weight: 900; }
+
+footer {
+  text-align: center;
+}
